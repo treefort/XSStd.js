@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)http://stackoverflow.com/questions/1223764/how-to-trap-double-key-press-in-javascript -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+    <title>keypress - How to trap double key press in javascript? - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    
+    <script type="text/javascript" async="" src="http://engine.adzerk.net/z/8277/adzerk1_2_4_43,adzerk2_2_17_45,adzerk3_2_4_44?keywords=javascript,keypress&xReferrer=https://www.google.com/"></script><script type="text/javascript" async="" src="./keypress - How to trap double key press in javascript  - Stack Overflow_files/ga.js"></script><script type="text/javascript" async="" src="./keypress - How to trap double key press in javascript  - Stack Overflow_files/quant.js"></script><script type="text/javascript" src="./keypress - How to trap double key press in javascript  - Stack Overflow_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./keypress - How to trap double key press in javascript  - Stack Overflow_files/stub.js"></script>
+    <link rel="stylesheet" type="text/css" href="./keypress - How to trap double key press in javascript  - Stack Overflow_files/all.css">
+    
+    <meta name="relativepagescore" content="176283">
+    <link rel="canonical" href="./keypress - How to trap double key press in javascript  - Stack Overflow_files/keypress - How to trap double key press in javascript  - Stack Overflow.html">
+    <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;How to trap double key press in javascript?&#39;" href="http://stackoverflow.com/feeds/question/1223764">
+    <script type="text/javascript">
+        
+        StackExchange.ready(function () {
+            StackExchange.using("postValidation", function () {
+                StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+            });
+
+            
+            StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:1223764});
+
+            styleCode();
+
+                StackExchange.realtime.subscribeToQuestion('1', '1223764');
+            
+                
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        StackExchange.init({"stackAuthUrl":"https://stackauth.com","serverTime":1364912500,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","useNewStyleFavoriteTagsEditor":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"bff20c78d489a666df0b26e2777e40f2","isAnonymous":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.js":"6c261bebf56a","js/moderator.js":"f96f7e4ee5dc","js/full-anon.js":"d94aa51f80ad","js/full.js":"c8fb259c6be5","js/wmd.js":"bb9dbf9364a2","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/mobile.js":"6eb68240242f","js/help.js":"fc9fb0517db2","js/tageditor.js":"450c9e8426fc","js/tageditornew.js":"b6c68ad4c7dd","js/inline-tag-editing.js":"8e84e8a137f7","js/revisions.js":"7273bb714bba","js/review.js":"51a50e83c754","js/tagsuggestions.js":"aa48ef6154df","js/post-validation.js":"cd619678f5d6"});
+        
+    </script>
+
+
+    <script type="text/javascript">
+        StackExchange.using(
+            "gps",
+            function () {
+                StackExchange.gps.init(true);
+            }
+        );
+    </script>
+
+<script async="" type="text/javascript" src="./keypress - How to trap double key press in javascript  - Stack Overflow_files/full-anon.js"></script><style type="text/css"></style><script async="" type="text/javascript" src="./keypress - How to trap double key press in javascript  - Stack Overflow_files/post-validation.js"></script><script async="" type="text/javascript" src="./keypress - How to trap double key press in javascript  - Stack Overflow_files/prettify-full.js"></script></head>
+<body class="question-page">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+    <div class="container">
+        <div id="header">
+            <div id="portalLink">
+                <a class="genu" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
+            </div>
+            <div id="topbar">
+                <div id="hlinks">
+                    
+
+
+
+
+
+
+
+
+
+<span id="hlinks-user">
+
+</span>
+<span id="hlinks-nav">
+                   <a href="http://stackoverflow.com/users/login?returnurl=%2fquestions%2f1223764%2fhow-to-trap-double-key-press-in-javascript">log in</a>
+
+ <span class="lsep">|</span>
+                    <a href="http://careers.stackoverflow.com/">careers 2.0</a>
+
+ <span class="lsep">|</span>
+
+</span>
+<span id="hlinks-custom">
+        <a href="http://chat.stackoverflow.com/">chat</a>
+
+ <span class="lsep">|</span>
+            <a href="http://meta.stackoverflow.com/">meta</a>
+
+ <span class="lsep">|</span>
+        <a href="http://stackoverflow.com/about">about</a>
+
+ <span class="lsep">|</span>
+    <a href="http://stackoverflow.com/faq">faq</a>
+
+</span>
+                </div>
+                <div id="hsearch">
+                    <form id="search" action="http://stackoverflow.com/search" method="get" autocomplete="off">
+                    <div>
+                        <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="">
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                        <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://stackoverflow.com/badges">Badges</a></li>
+                        <li><a id="nav-unanswered" href="http://stackoverflow.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+        <div id="content">
+            
+
+<div itemscope="" itemtype="http://schema.org/Article">
+<link itemprop="image" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+<div id="question-header">
+    <h1 itemprop="name"><a href="./keypress - How to trap double key press in javascript  - Stack Overflow_files/keypress - How to trap double key press in javascript  - Stack Overflow.html" class="question-hyperlink">How to trap double key press in javascript?</a></h1>
+</div>
+<div id="mainbar">
+
+
+
+<div class="question" data-questionid="1223764" id="question">
+    
+            <div class="everyonelovesstackoverflow" id="adzerk1">
+        </div>
+
+
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" value="1223764">
+    <a class="vote-up-off" title="This question shows research effort; it is useful and clear (click again to undo)">up vote</a>
+    <span class="vote-count-post ">6</span>
+    <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful (click again to undo)">down vote</a>
+    
+    <a class="star-off" href="http://stackoverflow.com/questions/1223764/how-to-trap-double-key-press-in-javascript#" title="This is a favorite question (click again to undo)">favorite</a>
+    <div class="favoritecount"><b></b></div>   
+
+ 
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="description">
+        <p>I would like to be able to trap the double key press (for the Char T for example) in order to do some special processing.I would like the key presses to happen fast enough to not be interpreted as two separate presses, just like the double click.
+Any ideas how i can achieve this?</p>
+
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/javascript" class="post-tag" title="show questions tagged &#39;javascript&#39;" rel="tag">javascript</a> <a href="http://stackoverflow.com/questions/tagged/keypress" class="post-tag" title="show questions tagged &#39;keypress&#39;" rel="tag">keypress</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/q/1223764" title="short permalink to this question" class="short-link" id="link-post-1223764">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/1223764/edit" class="suggest-edit-post" title="">improve this question</a></div>            </td>
+    <td class="post-signature owner">
+        
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                                    asked
+ <span title="2009-08-03 18:06:08Z" class="relativetime">Aug 3 '09 at 18:06</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/55299/ak3naton"><div class=""><img src="./keypress - How to trap double key press in javascript  - Stack Overflow_files/51b0ed8860fa1c8b6de3f7f27bbcdc85" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/55299/ak3naton">ak3naton</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">942</span><span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span><span title="31 bronze badges"><span class="badge3"></span><span class="badgecount">31</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-1223764" class="comments dno">
+        <table>
+        <tbody>
+        
+            <tr><td></td><td></td></tr>
+        
+        </tbody>
+    
+        </table>
+    </div>
+    
+</td>
+</tr>            </tbody></table>    
+</div>
+
+
+<div id="answers">
+
+    <a name="tab-top"></a>
+    <div id="answers-header">
+        <div class="subheader answers-subheader">
+            <h2>
+                    2 Answers
+            </h2>
+            <div id="tabs">
+                <a href="http://stackoverflow.com/questions/1223764/how-to-trap-double-key-press-in-javascript?answertab=active#tab-top" title="Answers with the latest activity first">active</a>
+<a class="youarehere" href="http://stackoverflow.com/questions/1223764/how-to-trap-double-key-press-in-javascript?answertab=oldest#tab-top" title="Answers in the order they were provided">oldest</a>
+<a href="http://stackoverflow.com/questions/1223764/how-to-trap-double-key-press-in-javascript?answertab=votes#tab-top" title="Answers with the highest score first">votes</a>
+
+            </div>
+        </div>    
+    </div>    
+
+
+
+
+  
+<a name="1223775"></a>
+<div id="answer-1223775" class="answer accepted-answer" data-answerid="1223775">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" value="1223775">
+    <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+    <span class="vote-count-post ">8</span>
+    <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+    
+
+            <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+ 
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text"><p>When the key(s) are hit, make a note of the time. Then compare it with the time you noted the <em>last</em> time they key(s) were hit.</p>
+
+<p>If the difference is within your threshold, consider it a double. Otherwise, don't. Rough example:</p>
+
+<pre class="default prettyprint prettyprinted" style=""><code><span class="kwd">var</span><span class="pln"> delta </span><span class="pun">=</span><span class="pln"> </span><span class="lit">500</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> lastKeypressTime </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> </span><span class="typ">KeyHandler</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> </span><span class="typ">String</span><span class="pun">.</span><span class="pln">fromCharCode</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">.</span><span class="pln">charCode</span><span class="pun">).</span><span class="pln">toUpperCase</span><span class="pun">())</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="str">'T'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+   </span><span class="pun">{</span><span class="pln">
+      </span><span class="kwd">var</span><span class="pln"> thisKeypressTime </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">();</span><span class="pln">
+      </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> thisKeypressTime </span><span class="pun">-</span><span class="pln"> lastKeypressTime </span><span class="pun">&lt;=</span><span class="pln"> delta </span><span class="pun">)</span><span class="pln">
+      </span><span class="pun">{</span><span class="pln">
+        doDoubleKeypress</span><span class="pun">();</span><span class="pln">
+        </span><span class="com">// optional - if we'd rather not detect a triple-press</span><span class="pln">
+        </span><span class="com">// as a second double-press, reset the timestamp</span><span class="pln">
+        thisKeypressTime </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+      lastKeypressTime </span><span class="pun">=</span><span class="pln"> thisKeypressTime</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/1223775" title="short permalink to this answer" class="short-link" id="link-post-1223775">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/1223775/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                            edited
+                             <a href="http://stackoverflow.com/posts/1223775/revisions" title="show all edits to this post"><span title="2009-08-03 18:44:21Z" class="relativetime">Aug 3 '09 at 18:44</span></a>
+
+        </div>
+        <div class="user-gravatar32">
+            
+        </div>
+        <div class="user-details">
+            <br>
+            
+        </div>
+    </div>
+    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    
+
+    <div class="user-info user-hover">
+        <div class="user-action-time">
+                                    answered
+ <span title="2009-08-03 18:08:04Z" class="relativetime">Aug 3 '09 at 18:08</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/811/shog9"><div class=""><img src="./keypress - How to trap double key press in javascript  - Stack Overflow_files/ae15c48f686a0ecb39848f980b296611" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/811/shog9">Shog9</a><span class="mod-flair" title="moderator">♦</span><br>
+            <span class="reputation-score" title="reputation score 63452" dir="ltr">63.5k</span><span title="15 gold badges"><span class="badge1"></span><span class="badgecount">15</span></span><span title="129 silver badges"><span class="badge2"></span><span class="badgecount">129</span></span><span title="174 bronze badges"><span class="badge3"></span><span class="badgecount">174</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-1223775" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-1048979" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">This solution uses the Ctrl key.  He does not say he needs that (although it makes sense to me).</span> –&nbsp;<a href="http://stackoverflow.com/users/54420/josh-stodola" title="31740 reputation" class="comment-user">Josh Stodola</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(1048979, 1223775)" href="http://stackoverflow.com/questions/1223764/how-to-trap-double-key-press-in-javascript#comment1048979_1223775"><span title="2009-08-03 18:36:34Z" class="relativetime-clean">Aug 3 '09 at 18:36</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-1049020" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy"><b>@Josh Stodola:</b> HA! Shows how careful i read... Saw "Char T", read "Ctrl T"... oops!</span> –&nbsp;<a href="http://stackoverflow.com/users/811/shog9" title="63452 reputation" class="comment-user">Shog9<span class="mod-flair" title="moderator">♦</span></a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(1049020, 1223775)" href="http://stackoverflow.com/questions/1223764/how-to-trap-double-key-press-in-javascript#comment1049020_1223775"><span title="2009-08-03 18:42:17Z" class="relativetime-clean">Aug 3 '09 at 18:42</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-1049041" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">working great thanks!</span> –&nbsp;<a href="http://stackoverflow.com/users/55299/ak3naton" title="942 reputation" class="comment-user owner">ak3naton</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(1049041, 1223775)" href="http://stackoverflow.com/questions/1223764/how-to-trap-double-key-press-in-javascript#comment1049041_1223775"><span title="2009-08-03 18:45:40Z" class="relativetime-clean">Aug 3 '09 at 18:45</span></a></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+</td>
+</tr>
+   
+    </tbody></table>
+</div>
+        <div class="everyonelovesstackoverflow" id="adzerk3">
+        </div>
+
+
+
+  
+<a name="1223777"></a>
+<div id="answer-1223777" class="answer" data-answerid="1223777">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" value="1223777">
+    <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+    <span class="vote-count-post ">5</span>
+    <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+    
+
+ 
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text"><p>Have a variable (perhaps <code>first_press</code>) that you set to true when a keypress event happens, and start a timer that will reset the variable to false after a set amount of time (however fast you want them to press the keys).</p>
+
+<p>In your keypress event, if that variable is true then you have a double press.</p>
+
+<p>Example:</p>
+
+<pre class="default prettyprint prettyprinted" style=""><code><span class="kwd">var</span><span class="pln"> first_press </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> key_press</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">first_press</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// they have already clicked once, we have a double</span><span class="pln">
+        do_double_press</span><span class="pun">();</span><span class="pln">
+        first_press </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// this is their first key press</span><span class="pln">
+        first_press </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+
+        </span><span class="com">// if they don't click again in half a second, reset</span><span class="pln">
+        window</span><span class="pun">.</span><span class="pln">setTimeout</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> first_press </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln"> </span><span class="pun">},</span><span class="pln"> </span><span class="lit">500</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/1223777" title="short permalink to this answer" class="short-link" id="link-post-1223777">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/1223777/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    
+
+    <div class="user-info user-hover">
+        <div class="user-action-time">
+                                    answered
+ <span title="2009-08-03 18:08:14Z" class="relativetime">Aug 3 '09 at 18:08</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/3078/brian-ramsay"><div class=""><img src="./keypress - How to trap double key press in javascript  - Stack Overflow_files/df482dfdcc49fc115d2aa8b0ea1fcb34" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/3078/brian-ramsay">Brian Ramsay</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">3,652</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="20 silver badges"><span class="badge2"></span><span class="badgecount">20</span></span><span title="38 bronze badges"><span class="badge3"></span><span class="badgecount">38</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-1223777" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-1048949" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">AND you can make "half-a-second" a configurable persistent value which users can change. Usability rules!</span> –&nbsp;<a href="http://stackoverflow.com/users/65232/dalbaeb" title="1741 reputation" class="comment-user">dalbaeb</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(1048949, 1223777)" href="http://stackoverflow.com/questions/1223764/how-to-trap-double-key-press-in-javascript#comment1048949_1223777"><span title="2009-08-03 18:32:19Z" class="relativetime-clean">Aug 3 '09 at 18:32</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-1048954" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">-1 This works for <i>every</i> key pressed.</span> –&nbsp;<a href="http://stackoverflow.com/users/54420/josh-stodola" title="31740 reputation" class="comment-user">Josh Stodola</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(1048954, 1223777)" href="http://stackoverflow.com/questions/1223764/how-to-trap-double-key-press-in-javascript#comment1048954_1223777"><span title="2009-08-03 18:33:34Z" class="relativetime-clean">Aug 3 '09 at 18:33</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-1048961" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">I wasn't trying to provide a drop-in solution for him.  Just showing him the general idea.</span> –&nbsp;<a href="http://stackoverflow.com/users/3078/brian-ramsay" title="3652 reputation" class="comment-user">Brian Ramsay</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(1048961, 1223777)" href="http://stackoverflow.com/questions/1223764/how-to-trap-double-key-press-in-javascript#comment1048961_1223777"><span title="2009-08-03 18:34:18Z" class="relativetime-clean">Aug 3 '09 at 18:34</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-1049000" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">Regardless, you're going to have tons of timeouts going at once, which will eventually bring the users browser to its knees.  Shog's answer using Date is definitely better.</span> –&nbsp;<a href="http://stackoverflow.com/users/54420/josh-stodola" title="31740 reputation" class="comment-user">Josh Stodola</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(1049000, 1223777)" href="http://stackoverflow.com/questions/1223764/how-to-trap-double-key-press-in-javascript#comment1049000_1223777"><span title="2009-08-03 18:39:15Z" class="relativetime-clean">Aug 3 '09 at 18:39</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-1049078" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy"><b>@Josh Stodola:</b> that could probably be avoided by saving the timer ID somewhere and stopping it prior to starting a new one. That said, it's more work than just keeping a timestamp... The only use i can think of for it would be if you wanted to perform two different, mutually-exclusive actions for single-press and double-press: a check in the timer callback could trigger the former if <code>first_press</code> was still true, and the latter if it was false.</span> –&nbsp;<a href="http://stackoverflow.com/users/811/shog9" title="63452 reputation" class="comment-user">Shog9<span class="mod-flair" title="moderator">♦</span></a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(1049078, 1223777)" href="http://stackoverflow.com/questions/1223764/how-to-trap-double-key-press-in-javascript#comment1049078_1223777"><span title="2009-08-03 18:52:06Z" class="relativetime-clean">Aug 3 '09 at 18:52</span></a></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+</td>
+</tr>
+   
+    </tbody></table>
+</div>
+    <a name="new-answer"></a>
+    <form id="post-form" action="http://stackoverflow.com/questions/1223764/answer/submit" method="post" class="post-form">
+        <input type="hidden" id="post-id" value="1223764">
+        <h2 class="space">Your Answer</h2>
+
+
+
+    
+<script type="text/javascript">
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+         
+        prepareEditor({
+            heartbeatType: 'answer',
+            bindNavPrevention: true,
+            postfix: "",
+            onDemand: true,
+            discardSelector: ".discard-answer"
+            ,immediatelyShowMarkdownHelp:true
+        });
+        
+
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="bff20c78d489a666df0b26e2777e40f2">
+        <input id="author" name="author" type="text">
+    </div>
+</div>
+        <div style="position: relative;"> 
+            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="http://stackoverflow.com/users/login?returnurl=%2fquestions%2f1223764%2fhow-to-trap-double-key-press-in-javascript%23new-answer">log in</a></h3>
+                        <script type="text/javascript">
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Stack Exchange</span></p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid">
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false">
+                    <input type="button" class="submit-openid" value="Submit" style="display:none">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <script type="text/javascript">
+                StackExchange.ready(function () {
+                    StackExchange.helpers.bindHelpOverlayEvents($('.vm input'));
+                });
+            </script>
+            <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="text" size="30" maxlength="100" value="" tabindex="106">
+                    <span class="edit-field-overlay">required, but not shown</span>
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', '%2fquestions%2f1223764%2fhow-to-trap-double-key-press-in-javascript%23new-answer');
+                    }
+                );
+            </script>
+            <noscript>
+                        &lt;h3&gt;Post as a guest&lt;/h3&gt;
+    &lt;div class="form-item"&gt;
+        &lt;table&gt;
+        &lt;tr&gt;
+                    &lt;script type="text/javascript"&gt;
+                StackExchange.ready(function () {
+                    StackExchange.helpers.bindHelpOverlayEvents($('.vm input'));
+                });
+            &lt;/script&gt;
+            &lt;td class="vm"&gt;
+                &lt;div&gt;
+                    &lt;label for="display-name"&gt;Name&lt;/label&gt;
+                    &lt;input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for="m-address"&gt;Email&lt;/label&gt;
+                    &lt;input id="m-address" name="m-address" type="text" size="30" maxlength="100" value="" tabindex="106"&gt;
+                    &lt;span class="edit-field-overlay"&gt;required, but not shown&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+            </noscript>
+        </div>
+           
+            <div class="form-submit cbt">
+            <input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+            <a href="http://stackoverflow.com/questions/1223764/how-to-trap-double-key-press-in-javascript#" class="discard-answer dno">discard</a>
+    <p class="privacy-policy-agreement">
+        By posting your answer, you agree to the 
+        <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and 
+        <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.
+    </p>
+    <input type="hidden" name="legalLinksShown" value="1">
+        </div>
+    </form>
+
+
+
+        <h2 class="bottom-notice">
+                Not the answer you're looking for? 
+            Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/javascript" class="post-tag" title="show questions tagged &#39;javascript&#39;" rel="tag">javascript</a> <a href="http://stackoverflow.com/questions/tagged/keypress" class="post-tag" title="show questions tagged &#39;keypress&#39;" rel="tag">keypress</a> 
+                or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.
+        </h2>
+</div>
+</div>
+<div id="sidebar" class="show-votes">
+        <div class="module question-stats">
+        <p class="label-key">tagged</p>
+        <div class="tagged"><a href="http://stackoverflow.com/questions/tagged/javascript" class="post-tag" title="show questions tagged &#39;javascript&#39;" rel="tag">javascript</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">353196</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/keypress" class="post-tag" title="show questions tagged &#39;keypress&#39;" rel="tag">keypress</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">821</span></span><br>
+</div>
+        <table id="qinfo">
+            <tbody><tr>
+                <td><p class="label-key">asked</p></td>
+                <td style="padding-left:10px"><p class="label-key" title="2009-08-03 18:06:08Z"><b>3 years ago</b></p></td>
+            </tr>
+            <tr>
+                <td><p class="label-key">viewed</p></td>
+
+                <td style="padding-left:10px">
+                    <p class="label-key">
+                        <b>1893 times</b>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><p class="label-key">active</p></td>
+                <td style="padding-left:10px"><p class="label-key"><b><a href="http://stackoverflow.com/questions/1223764/how-to-trap-double-key-press-in-javascript?lastactivity" class="lastactivity-link" title="2009-08-03 18:44:21Z">3 years ago</a></b></p></td>
+            </tr>
+        </tbody></table>
+    </div>
+        
+                <script type="text/javascript">
+                var scriptSrc = "http://engine.adzerk.net/z/8277/adzerk1_2_4_43,adzerk2_2_17_45,adzerk3_2_4_44?keywords=javascript,keypress";
+                if (document.referrer) {
+                    if (/\?/.test(scriptSrc))
+                        scriptSrc += "&";
+                    else
+                        scriptSrc += "?";
+                    scriptSrc += "xReferrer=" + document.referrer;
+                }
+                StackExchange.ready(function () {
+                    var z = document.createElement("script");
+                    z.type = "text/javascript";
+                    z.async = "true";
+                    z.src = scriptSrc;
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(z, s);
+                });
+            </script>
+        <div class="everyonelovesstackoverflow" id="adzerk2">
+        </div>
+    <div id="hireme">
+        <script type="text/javascript">
+            var careers_adurl="http://careers.stackoverflow.com/gethired/js",careers_cssurl="//careerscdn.sstatic.net/careers/gethired/sidebar.css?fffffffff879eaa0",careers_leaderboardcssurl="//careerscdn.sstatic.net/careers/gethired/ninja.min.css?3afae8",careers_companycssurl="//careerscdn.sstatic.net/careers/gethired/company",careers_adselector="div.hireme, div#hireme";StackExchange.ready(function(){$.ajax({url:"//careerscdn.sstatic.net/careers/gethired/loader.min.js?3afae8",dataType:"script",cache:!0})})
+        </script>
+    </div>
+
+
+
+      
+    
+    <div class="module sidebar-linked">
+        <h4 id="h-linked">Linked</h4>
+        <div class="linked" data-tracker="lq=1">
+            <div class="spacer">
+<a href="http://stackoverflow.com/q/1343072?lq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes default">1</div>
+</a>
+<a href="http://stackoverflow.com/questions/1343072/capturing-distinct-keypresses?lq=1" class="question-hyperlink">Capturing distinct keypresses</a>
+</div>
+
+        </div>
+    </div>
+    <div class="module sidebar-related">
+        <h4 id="h-related">Related</h4>
+        <div class="related" data-tracker="rq=1">
+            <div class="spacer">
+<a href="http://stackoverflow.com/q/202285?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes answered-accepted default">3</div>
+</a>
+<a href="http://stackoverflow.com/questions/202285/trigger-a-keypress-with-jquery-and-specify-which-key-was-pressed?rq=1" class="question-hyperlink">Trigger a keypress with jQuery…and specify which key was pressed</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/1231327?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes default">1</div>
+</a>
+<a href="http://stackoverflow.com/questions/1231327/javascript-enter-key-press?rq=1" class="question-hyperlink">Javascript : Enter Key Press</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/1244533?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes answered-accepted default">1</div>
+</a>
+<a href="http://stackoverflow.com/questions/1244533/how-can-i-prevent-users-from-using-the-backspace-or-delete-keys-in-a-textbox-usi?rq=1" class="question-hyperlink">How can I prevent users from using the backspace or delete keys in a textbox using JavaScript?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/1584213?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes answered-accepted default">0</div>
+</a>
+<a href="http://stackoverflow.com/questions/1584213/disabling-key-functionality-in-browser?rq=1" class="question-hyperlink">Disabling key functionality in browser</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/1738808?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes answered-accepted default">6</div>
+</a>
+<a href="http://stackoverflow.com/questions/1738808/keypress-in-jquery-press-tab-inside-textarea-when-editing-an-existing-text?rq=1" class="question-hyperlink">Keypress in jQuery: Press TAB inside TEXTAREA (when editing an existing text)</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/1846599?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes answered-accepted default">0</div>
+</a>
+<a href="http://stackoverflow.com/questions/1846599/js-how-to-find-out-what-character-key-is-pressed?rq=1" class="question-hyperlink">js: how to find out what character key is pressed?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/2129303?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes answered-accepted default">5</div>
+</a>
+<a href="http://stackoverflow.com/questions/2129303/greasemonkey-javascript-key-press-help?rq=1" class="question-hyperlink">Greasemonkey Javascript Key Press Help</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/2859587?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes answered-accepted default">4</div>
+</a>
+<a href="http://stackoverflow.com/questions/2859587/javascript-keycode-46-is-del-function-key-or-period-sign?rq=1" class="question-hyperlink">JavaScript Keycode 46 is DEL Function key or (.) period sign?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/3682115?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes default">2</div>
+</a>
+<a href="http://stackoverflow.com/questions/3682115/how-to-get-the-key-pressed-and-put-into-array-in-javascript?rq=1" class="question-hyperlink">How to get the key pressed and put into array in JavaScript?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/4794451?rq=1" title="Vote score (upvotes - downvotes)">
+        <div class="answer-votes answered-accepted default">1</div>
+</a>
+<a href="http://stackoverflow.com/questions/4794451/observing-keydown-events-in-javascript-when-two-keys-are-pressed-simultaneously?rq=1" class="question-hyperlink">Observing keydown events in JavaScript when two keys are pressed simultaneously</a>
+</div>
+
+        </div>
+    </div>
+        <div class="everyonelovesstackoverflow" id="adzerk3">
+        </div>
+
+
+</div>
+
+<div id="feed-link">
+    <div id="feed-link-text"><a href="http://stackoverflow.com/feeds/question/1223764" title="feed of this question and its answers"><span class="feed-icon"></span>question feed</a></div>
+</div>
+<script type="text/javascript">
+StackExchange.ready(function(){$.get('/posts/1223764/ivc/8947');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/1223764/ivc/8947" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">default</div></div>
+
+
+
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                    <a href="http://stackoverflow.com/about">about</a> |
+                <a href="http://stackoverflow.com/faq">faq</a> |
+                <a href="http://blog.stackexchange.com/?blb=1">blog</a> |
+                    <a href="http://chat.stackoverflow.com/">chat</a> |
+                <a href="http://data.stackexchange.com/">data</a> |
+                <a href="http://stackexchange.com/legal">legal</a> |
+                <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> |
+                <a href="http://stackexchange.com/about/hiring">jobs</a> |
+                <a href="http://engine.adzerk.net/redirect/0/2776/2751/0/4de3c60f719c4dfcb1a57531c7050090/0">advertising info</a> |
+
+                <a onclick="StackExchange.switchMobile(&quot;on&quot;, &quot;/questions/1223764/how-to-trap-double-key-press-in-javascript&quot;)">mobile</a> |
+
+                <b><a href="http://stackoverflow.com/help">contact us</a></b>
+                  | <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                <div id="footer-sites">
+                    <span style="color:#FE7A15;font-size:140%">■</span>&nbsp;<a href="http://stackoverflow.com/">stackoverflow.com</a>&nbsp; 
+<span style="color:#FE7A15;font-size:140%">■</span>&nbsp;<a href="http://stackapps.com/">api/apps</a>&nbsp; 
+<span style="color:#FE7A15;font-size:140%">■</span>&nbsp;<a href="http://careers.stackoverflow.com/">careers&nbsp;2.0</a>&nbsp; 
+<span style="color:#E8272C;font-size:140%">■</span>&nbsp;<a href="http://serverfault.com/">serverfault.com</a>&nbsp; 
+<span style="color:#00AFEF;font-size:140%">■</span>&nbsp;<a href="http://superuser.com/">superuser.com</a>&nbsp; 
+<span style="color:#969696;font-size:140%">■</span>&nbsp;<a href="http://meta.stackoverflow.com/">meta</a>&nbsp; 
+<span style="color:#46937D;font-size:140%">■</span>&nbsp;<a href="http://area51.stackexchange.com/">area&nbsp;51</a>&nbsp; 
+<span style="color:#C0D0DC;font-size:140%">■</span>&nbsp;<a href="http://webapps.stackexchange.com/">webapps</a>&nbsp; 
+<span style="color:#000000;font-size:140%">■</span>&nbsp;<a href="http://gaming.stackexchange.com/">gaming</a>&nbsp; 
+<span style="color:#dd4814;font-size:140%">■</span>&nbsp;<a href="http://askubuntu.com/">ubuntu</a>&nbsp; 
+<span style="color:#9ce4fe;font-size:140%">■</span>&nbsp;<a href="http://webmasters.stackexchange.com/">webmasters</a>&nbsp; 
+<span style="color:#cf4d3f;font-size:140%">■</span>&nbsp;<a href="http://cooking.stackexchange.com/">cooking</a>&nbsp; 
+<span style="color:#f4f28d;font-size:140%">■</span>&nbsp;<a href="http://gamedev.stackexchange.com/">game development</a>&nbsp; 
+<span style="color:#0f3559;font-size:140%">■</span>&nbsp;<a href="http://math.stackexchange.com/">math</a>&nbsp; 
+<span style="color:#f2f2f2;font-size:140%">■</span>&nbsp;<a href="http://photo.stackexchange.com/">photography</a>&nbsp; 
+<span style="color:#037187;font-size:140%">■</span>&nbsp;<a href="http://stats.stackexchange.com/">stats</a>&nbsp; 
+<span style="color:#f1e7cc;font-size:140%">■</span>&nbsp;<a href="http://tex.stackexchange.com/">tex</a>&nbsp; 
+<span style="color:#e1cdae;font-size:140%">■</span>&nbsp;<a href="http://english.stackexchange.com/">english</a>&nbsp; 
+<span style="color:#a2d9f6;font-size:140%">■</span>&nbsp;<a href="http://cstheory.stackexchange.com/">theoretical cs</a>&nbsp; 
+<span style="color:#1b3e6c;font-size:140%">■</span>&nbsp;<a href="http://programmers.stackexchange.com/">programmers</a>&nbsp; 
+<span style="color:#293a5d;font-size:140%">■</span>&nbsp;<a href="http://unix.stackexchange.com/">unix</a>&nbsp;
+<span style="color:#bec0cb;font-size:140%">■</span>&nbsp;<a href="http://apple.stackexchange.com/">apple</a>&nbsp;
+<span style="color:#939185;font-size:140%">■</span>&nbsp;<a href="http://wordpress.stackexchange.com/">wordpress</a>&nbsp;
+<span style="color:#ebf5f5;font-size:140%">■</span>&nbsp;<a href="http://physics.stackexchange.com/">physics</a>&nbsp;
+<span style="color:#4176ab;font-size:140%">■</span>&nbsp;<a href="http://diy.stackexchange.com/">home&nbsp;improvement</a>&nbsp;
+<span style="color:#d1d8d7;font-size:140%">■</span>&nbsp;<a href="http://gis.stackexchange.com/">gis</a>&nbsp;
+<span style="color:#e5e2d3;font-size:140%">■</span>&nbsp;<a href="http://electronics.stackexchange.com/">electrical&nbsp;engineering</a>&nbsp;
+<span style="color:#a4c639;font-size:140%">■</span>&nbsp;<a href="http://android.stackexchange.com/">android</a>&nbsp;
+<span style="color:#2e4e60;font-size:140%">■</span>&nbsp;<a href="http://security.stackexchange.com/">security</a>&nbsp;
+<span style="color:#45bcb5;font-size:140%">■</span>&nbsp;<a href="http://bicycles.stackexchange.com/">bicycles</a>&nbsp;
+<span style="color:#00adee;font-size:140%">■</span>&nbsp;<a href="http://dba.stackexchange.com/">dba</a>&nbsp;
+<span style="color:#2edaf0;font-size:140%">■</span>&nbsp;<a href="http://drupal.stackexchange.com/">drupal</a>&nbsp;
+<span style="color:#213951;font-size:140%">■</span>&nbsp;<a href="http://sharepoint.stackexchange.com/">sharepoint</a>&nbsp;
+<span style="color:#73abb3;font-size:140%">■</span>&nbsp;<a href="http://scifi.stackexchange.com/">scifi&nbsp;&amp;&nbsp;fantasy</a>&nbsp;
+<span style="color:#23629F;font-size:140%">■</span>&nbsp;<a href="http://ux.stackexchange.com/">ux</a>&nbsp;
+<span style="color:#faff72;font-size:140%">■</span>&nbsp;<a href="http://skeptics.stackexchange.com/">skeptics</a>&nbsp;
+<span style="color:#623121;font-size:140%">■</span>&nbsp;<a href="http://rpg.stackexchange.com/">rpg</a>&nbsp;
+<span style="color:#e4be88;font-size:140%">■</span>&nbsp;<a href="http://judaism.stackexchange.com/">judaism</a>&nbsp;
+<span style="color:#ffecb1;font-size:140%">■</span>&nbsp;<a href="http://mathematica.stackexchange.com/">mathematica</a>&nbsp;
+<span style="color:#1b8598;font-size:140%">■</span>&nbsp;<a href="http://travel.stackexchange.com/">travel</a>&nbsp;
+                </div>
+            </div>
+            <div id="footer-flair">
+                <a class="peer1" href="http://www.peer1.com/stackoverflow"></a>  
+	            <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                <div id="svnrev">rev 2013.4.1.598</div>
+                        </div>
+            <div id="copyright">
+                site design / logo © 2013 stack exchange inc; 
+                user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            
+
+        </div>
+    </div>
+    
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-1']);
+        _gaq.push(['_setCustomVar', 1, 'tags', '|javascript|keypress|']); 
+_gaq.push(['_trackPageview']);
+    var _qevents = _qevents || [];
+    (function(){
+        var s=document.getElementsByTagName('script')[0];
+        var ga=document.createElement('script');
+        ga.type='text/javascript';
+        ga.async=true;
+        ga.src='http://www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(ga,s);
+        var sc=document.createElement('script');
+        sc.type='text/javascript';
+        sc.async=true;
+        sc.src='http://edge.quantserve.com/quant.js'; 
+        s.parentNode.insertBefore(sc,s);
+    })();
+    </script>
+    <script type="text/javascript">
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>        
+    
+
+</body></html>
